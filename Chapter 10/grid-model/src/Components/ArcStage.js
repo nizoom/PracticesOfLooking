@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/CompiledCss/arcstage.css";
+
 const ArcStage = (props) => {
+  const [textAreaState, setTextAreaState] = useState();
+  const handleTextChange = (event) => {
+    setTextAreaState(event.target.value);
+  };
+  const changePage = (direction) => {
+    console.log(direction);
+    props.handlePageChange(direction);
+  };
   return (
     <div className="arc-stage-page-wrapper">
       <section className="stage-grid">
@@ -9,15 +18,22 @@ const ArcStage = (props) => {
         </div>
         <div className="bottom-row">
           <p className="image-description"> Image Description</p>
-          <p className="note-pad"> Notepad </p>
+          <textarea
+            className="note-pad"
+            value={textAreaState}
+            onChange={handleTextChange}
+            defaultValue="Take notes here!"
+          ></textarea>
         </div>
       </section>
       <div className="buttons-section">
         <div className="back-btns-div">
-          <button>Back</button>
-          <button>Home</button>
+          <button onClick={() => changePage("back")}>Back</button>
+          <button onClick={() => changePage("home")}>Home</button>
         </div>
-        <button>Next</button>
+        <button className="next-btn" onClick={() => changePage("next")}>
+          Next
+        </button>
       </div>
     </div>
   );

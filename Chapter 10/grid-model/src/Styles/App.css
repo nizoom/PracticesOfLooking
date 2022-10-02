@@ -33,9 +33,16 @@ body{
   align-items: center;
   cursor: pointer;
   transition: transform 250ms;
+  font-family: 'Inter', 'sans-serif';
 }
 
 .square:hover{
   transform: translateY(-5px);
 }
-
+.chapter-header{
+  font-family: 'Inter', 'sans-serif';
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  font-size:28.43px;
+}

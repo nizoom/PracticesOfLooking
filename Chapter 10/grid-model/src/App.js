@@ -1,6 +1,7 @@
 import "./Styles/App.css";
 import "./Styles/CompiledCss/globalstyles.css";
 import ArcStage from "./Components/ArcStage";
+import StageHandler from "./Components/StageHandler";
 import { useState } from "react";
 const App = () => {
   // Manage state props in seperate function
@@ -8,6 +9,17 @@ const App = () => {
 
   const handleArcClick = () => {
     setPage(page + 1);
+  };
+  const handlePageChange = (direction) => {
+    console.log(direction);
+    if (direction === "next") {
+      setPage(page + 1);
+    }
+    if (direction === "back") {
+      setPage(page - 1);
+    } else {
+      setPage(0);
+    }
   };
   return (
     <div className="App">
@@ -32,7 +44,8 @@ const App = () => {
           </div>
         </section>
       ) : (
-        <ArcStage page={page} />
+        // <ArcStage page={page} handlePageChange={handlePageChange} />
+        <StageHandler page={page} handlePageChange={handlePageChange} />
       )}
     </div>
   );
