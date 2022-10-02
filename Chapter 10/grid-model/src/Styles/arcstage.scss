@@ -1,0 +1,33 @@
+.stage-grid{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.stage-grid{
+    p {
+        background-color: white;
+        width: 200px;
+        margin: 30px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .image-square{
+        width: 100%;
+    }
+}
+
+.buttons-section{
+    position: absolute;
+    bottom: 0;
+}
