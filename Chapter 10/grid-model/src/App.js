@@ -11,16 +11,22 @@ const App = () => {
     setPage(page + 1);
   };
   const handlePageChange = (direction) => {
-    console.log(direction);
     if (direction === "next") {
       setPage(page + 1);
+      return;
     }
     if (direction === "back") {
       setPage(page - 1);
-    } else {
+      return;
+    }
+    if (direction === "home") {
       setPage(0);
     }
   };
+
+  // useEffect(() => {
+  //   console.log(page);
+  // });
   return (
     <div className="App">
       {page === 0 ? (
@@ -30,17 +36,19 @@ const App = () => {
           </header>
           <div className="top-row">
             <p className="square" onClick={handleArcClick}>
-              {" "}
               Arc 1
             </p>
             <p className="square" onClick={handleArcClick}>
-              {" "}
               Arc 2
             </p>
           </div>
           <div className="bottom-row">
-            <p className="square"> Arc 3</p>
-            <p className="square"> Arc 4</p>
+            <p className="square" onClick={handleArcClick}>
+              Arc 3
+            </p>
+            <p className="square" onClick={handleArcClick}>
+              Arc 4
+            </p>
           </div>
         </section>
       ) : (
