@@ -101,4 +101,15 @@
   width: 200px;
 }
 
+@media (max-width: 1300px) {
+  .buttons-section {
+    margin-bottom: -15px;
+    padding-bottom: 20px;
+    justify-content: space-evenly;
+  }
+  .back-btns-div {
+    flex-direction: row;
+  }
+}
+
 /*# sourceMappingURL=arcstage.css.map */

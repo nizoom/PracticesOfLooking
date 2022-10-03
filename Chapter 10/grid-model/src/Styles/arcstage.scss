@@ -33,8 +33,6 @@
         width: 800px;
         height: 400px;
     }
-        
-    
     .citation{
         background-color: black;
         margin: 15px 0 10px 0;
@@ -109,3 +107,13 @@
     width: 200px;
 }
 
+@media(max-width: 1300px){
+    .buttons-section{
+        margin-bottom: -15px;
+        padding-bottom: 20px;
+        justify-content: space-evenly;
+    }
+    .back-btns-div{
+      flex-direction: row;
+    }
+}

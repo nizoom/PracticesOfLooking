@@ -81,9 +81,6 @@ export function gatherContent(chapter, page) {
 
 export function updateNotes(chapter, page, notes) {
   if (chapter === "10.1") {
-    console.log(tenPointOne[page].notes);
     tenPointOne[page].notes = notes;
   }
-
-  console.log(tenPointOne);
 }
