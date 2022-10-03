@@ -46,8 +46,13 @@ body{
 }
 .chapter-header{
   font-family: 'Inter', 'sans-serif';
+  display: flex;
+  justify-content: center;
   text-align: center;
   color: white;
   font-weight: 500;
   font-size:28.43px;
+  width: 500px;
+  margin: auto;
+  margin-bottom: 50px;
 }
