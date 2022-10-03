@@ -3,7 +3,7 @@ import ArcStage from "./ArcStage";
 import { gatherContent } from "../Content";
 const StageHandler = (props) => {
   const [content, maxPage] = gatherContent(props.subChapter, props.page);
-  console.log(content);
+
   return (
     <ArcStage
       page={props.page}
@@ -13,6 +13,7 @@ const StageHandler = (props) => {
       maxPage={maxPage}
       subChapter={props.subChapter}
       text={content.text}
+      notes={content.notes}
     />
   );
 };

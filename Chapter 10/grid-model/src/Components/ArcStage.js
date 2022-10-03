@@ -1,33 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MediaComponent from "./MediaComponent";
 import "../Styles/CompiledCss/arcstage.css";
+import { updateNotes } from "../Content";
 
 const ArcStage = (props) => {
-  const [textAreaState, setTextAreaState] = useState();
+  const [textAreaState, setTextAreaState] = useState(props.notes);
   const handleTextChange = (event) => {
     setTextAreaState(event.target.value);
   };
   const changePage = (direction) => {
+    updateNotes(props.subChapter, props.page, textAreaState);
     props.handlePageChange(direction);
   };
+
+  useEffect(() => {
+    setTextAreaState(props.notes);
+  }, [props.page]);
   return (
     <div className="arc-stage-page-wrapper">
-      {/* <img src="../Chapters/10.1/camps.png" height="100" width="100" /> */}
-
       <section className="stage-grid">
         <div className="top-row">
           <MediaComponent subChapter={props.subChapter} page={props.page} />
-          {/* <p className="image-square"> Image {props.page}</p> */}
         </div>
         <p className="citation"> {props.citation} </p>
         <div className="bottom-stage-row">
-          {/* <p className="image-description"> Image Description</p> */}
           <p className="image-description"> {props.text}</p>
           <textarea
             className="note-pad"
             value={textAreaState}
             onChange={handleTextChange}
-            defaultValue="Take notes here!"
           ></textarea>
         </div>
       </section>
