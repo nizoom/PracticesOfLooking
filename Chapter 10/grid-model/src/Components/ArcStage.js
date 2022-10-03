@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MediaComponent from "./MediaComponent";
 import "../Styles/CompiledCss/arcstage.css";
 
 const ArcStage = (props) => {
@@ -7,14 +8,16 @@ const ArcStage = (props) => {
     setTextAreaState(event.target.value);
   };
   const changePage = (direction) => {
-    console.log(direction);
     props.handlePageChange(direction);
   };
   return (
     <div className="arc-stage-page-wrapper">
+      {/* <img src="../Chapters/10.1/camps.png" height="100" width="100" /> */}
+
       <section className="stage-grid">
         <div className="top-row">
-          <p className="image-square"> Image {props.page}</p>
+          <MediaComponent subChapter={props.subChapter} page={props.page} />
+          {/* <p className="image-square"> Image {props.page}</p> */}
         </div>
         <p className="citation"> Image Citation </p>
         <div className="bottom-row">

@@ -39,6 +39,11 @@ body{
 .square:hover{
   transform: translateY(-5px);
 }
+.square p {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
 .chapter-header{
   font-family: 'Inter', 'sans-serif';
   text-align: center;

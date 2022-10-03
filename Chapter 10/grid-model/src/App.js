@@ -1,6 +1,5 @@
 import "./Styles/App.css";
 import "./Styles/CompiledCss/globalstyles.css";
-import ArcStage from "./Components/ArcStage";
 import StageHandler from "./Components/StageHandler";
 import { useState } from "react";
 const App = () => {
@@ -32,15 +31,15 @@ const App = () => {
       {page === 0 ? (
         <section className="homepage-wrapper">
           <header className="chapter-header">
-            Chapter 10.1: Top-down infrastructure
+            Chapter 10: The Global Flow of Visual Culture
           </header>
           <div className="top-row">
-            <p className="square" onClick={handleArcClick}>
-              Arc 1
-            </p>
-            <p className="square" onClick={handleArcClick}>
-              Arc 2
-            </p>
+            <div className="square" onClick={handleArcClick}>
+              <p> Top down infrastructure</p>
+            </div>
+            <div className="square" onClick={handleArcClick}>
+              <p>Where is the human? </p>
+            </div>
           </div>
           <div className="bottom-row">
             <p className="square" onClick={handleArcClick}>
@@ -53,7 +52,11 @@ const App = () => {
         </section>
       ) : (
         // <ArcStage page={page} handlePageChange={handlePageChange} />
-        <StageHandler page={page} handlePageChange={handlePageChange} />
+        <StageHandler
+          page={page}
+          handlePageChange={handlePageChange}
+          subChapter="10.1"
+        />
       )}
     </div>
   );

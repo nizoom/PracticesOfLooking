@@ -44,7 +44,13 @@
         overflow-y: auto;
         padding: 0;
         justify-content:start;
+        margin: 10px 0 10px 0;
     }
+}
+
+.bottom-row{
+    display: flex;
+    justify-content: space-between;
 }
 
 .buttons-section{
@@ -78,10 +84,9 @@
 
 .note-pad{
     font-family: 'Inter', 'sans-serif';
-    padding: 5px;
+    margin: 10px 0 10px 0;
     resize: both;
     height: 200px;
-    margin: 30px;
     width: 200px;
 }
 
