@@ -1,15 +1,24 @@
 {
   "files": {
-    "main.css": "/PracticeOfLooking/static/css/main.ce1b017f.css",
-    "main.js": "/PracticeOfLooking/static/js/main.4f611ec0.js",
+    "main.css": "/PracticeOfLooking/static/css/main.68a1ca40.css",
+    "main.js": "/PracticeOfLooking/static/js/main.e53d1af8.js",
     "static/js/787.afcb6113.chunk.js": "/PracticeOfLooking/static/js/787.afcb6113.chunk.js",
+    "static/media/image7.png": "/PracticeOfLooking/static/media/image7.b958de2aca6cfd099901.png",
+    "static/media/image8.png": "/PracticeOfLooking/static/media/image8.b958de2aca6cfd099901.png",
+    "static/media/image5.png": "/PracticeOfLooking/static/media/image5.31fd09a19e6969844bc9.png",
+    "static/media/image1.png": "/PracticeOfLooking/static/media/image1.90c23ce9d8dec497189a.png",
+    "static/media/image6.png": "/PracticeOfLooking/static/media/image6.90c23ce9d8dec497189a.png",
+    "static/media/image9.png": "/PracticeOfLooking/static/media/image9.90c23ce9d8dec497189a.png",
+    "static/media/image3.png": "/PracticeOfLooking/static/media/image3.888d22d60222e1dbbf8d.png",
+    "static/media/image2.png": "/PracticeOfLooking/static/media/image2.0745625d43d20676d7de.png",
+    "static/media/image4.png": "/PracticeOfLooking/static/media/image4.8bae1cf1e785272adf2f.png",
     "index.html": "/PracticeOfLooking/index.html",
-    "main.ce1b017f.css.map": "/PracticeOfLooking/static/css/main.ce1b017f.css.map",
-    "main.4f611ec0.js.map": "/PracticeOfLooking/static/js/main.4f611ec0.js.map",
+    "main.68a1ca40.css.map": "/PracticeOfLooking/static/css/main.68a1ca40.css.map",
+    "main.e53d1af8.js.map": "/PracticeOfLooking/static/js/main.e53d1af8.js.map",
     "787.afcb6113.chunk.js.map": "/PracticeOfLooking/static/js/787.afcb6113.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce1b017f.css",
-    "static/js/main.4f611ec0.js"
+    "static/css/main.68a1ca40.css",
+    "static/js/main.e53d1af8.js"
   ]
 }
