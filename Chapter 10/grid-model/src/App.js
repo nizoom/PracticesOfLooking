@@ -51,7 +51,6 @@ const App = () => {
           </div>
         </section>
       ) : (
-        // <ArcStage page={page} handlePageChange={handlePageChange} />
         <StageHandler
           page={page}
           handlePageChange={handlePageChange}

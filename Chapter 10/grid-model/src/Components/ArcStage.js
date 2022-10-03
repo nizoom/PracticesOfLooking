@@ -19,19 +19,10 @@ const ArcStage = (props) => {
           <MediaComponent subChapter={props.subChapter} page={props.page} />
           {/* <p className="image-square"> Image {props.page}</p> */}
         </div>
-        <p className="citation"> Image Citation </p>
-        <div className="bottom-row">
+        <p className="citation"> {props.citation} </p>
+        <div className="bottom-stage-row">
           {/* <p className="image-description"> Image Description</p> */}
-          <p className="image-description">
-            {" "}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p className="image-description"> {props.text}</p>
           <textarea
             className="note-pad"
             value={textAreaState}
@@ -56,3 +47,11 @@ const ArcStage = (props) => {
 };
 
 export default ArcStage;
+
+// Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+// eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+// ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+// aliquip ex ea commodo consequat. Duis aute irure dolor in
+// reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+// pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+// culpa qui officia deserunt mollit anim id est laborum.

@@ -1,18 +1,18 @@
 import React from "react";
 import ArcStage from "./ArcStage";
-import { gatherContent } from "../GatherContent";
+import { gatherContent } from "../Content";
 const StageHandler = (props) => {
-  const content = gatherContent(props.page);
-  console.log(props.subChapter + "Image" + props.page);
+  const [content, maxPage] = gatherContent(props.subChapter, props.page);
+  console.log(content);
   return (
     <ArcStage
       page={props.page}
       handlePageChange={props.handlePageChange}
-      // imgName={props.subChapter + "Image" + props.page}
-      citation={""}
+      citation={content.citation}
       existingNotes={""}
-      maxPage={4}
+      maxPage={maxPage}
       subChapter={props.subChapter}
+      text={content.text}
     />
   );
 };

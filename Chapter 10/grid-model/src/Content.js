@@ -48,25 +48,39 @@ const tenPointOnePage7 = {
   audio: "",
 };
 const tenPointOnePage8 = {
-  text: "Here the fence line has been drawn in yellow to emphasize the decisions made about the limits of the camp that determined and controlled where people were allowed to move. ",
+  text: "Here the fence line has been drawn in yellow to emphasize the decisions made about the limits of the camp that determined and controlled where people were allowed to move. For instance, the large, white rectangular building is in an area enclosed by a fence that seems to have an opening in two spaces and pavement walkways leading to the building.",
+  citation: "",
+  notes: "",
+  audio: "",
+};
+const tenPointOnePage9 = {
+  text: "What else do you notice about the potential walking routes? They are all linear, the neighbors are close, and there is a long distance from one’s home to what could be a communal facilities or a communal series of buildings in the center. This would have been important given that women and children often had to ask men to accompany them to such facilities at night for their safety. Given the handful of people we see that appear as specks, in this image we see some potential walking routes, a few additional humans in bright colors and trees have been added. Individuals that are outside in the camp do remain visible to the aerial vision from above. Does this remind us of the disappearance of the individual or does the God’s eye view show us their inability to hide? Are these cubes indeed homes? Could one walk outside at all times of the day, or were there strict regulations? In the next sequence we will move into unpacking the cube-like housing structures within industrial design and the individual housing units we have seen here.",
   citation: "",
   notes: "",
   audio: "",
 };
 
-const tenPointOneContent = {};
+const tenPointOne = {
+  1: tenPointOnePage1,
+  2: tenPointOnePage2,
+  3: tenPointOnePage3,
+  4: tenPointOnePage4,
+  5: tenPointOnePage5,
+  6: tenPointOnePage6,
+  7: tenPointOnePage7,
+  8: tenPointOnePage8,
+  9: tenPointOnePage9,
+};
 
 export function gatherContent(chapter, page) {
-  //   const TenPointOne = new ArcStage();
+  if (chapter === "10.1") {
+    // return content and number of pages so we know what the last page will be
+    return [tenPointOne[page], Object.keys(tenPointOne).length];
+  }
 }
 
-// each subchapter has its own arc
-
-// class ArcStage {
-//   constructor(img, text, notes, citation, audio) {
-//     this.text = text;
-//     this.notes = notes;
-//     this.citation = citation;
-//     this.audio = audio;
-//   }
-// }
+export function updateNotes(chapter, page, notes) {
+  if (chapter === "10.1") {
+    tenPointOne[page].notes = notes;
+  }
+}
