@@ -20,21 +20,39 @@ const tenPointOnePage3 = {
   audio: "",
 };
 const tenPointOnePage4 = {
-  text: "What is it about drawing the body that makes it less amenable to linear perspective? How can this be extended to the first image we saw? What is it about humanity that conflicts with environments that are rigidly industrial and grid-like?",
+  text: "How do drones, or Unmanned Aerial Vehicles, give us images of people in cities or urban landscapes differently than other social and political forms of visual surveillance? Orbiting as a force with machine agency, these feed our view of human survival. They create them. A wild range of drones exist which do things for and with us humans.  In the above image we see a camera has been installed, for recording videos, taking still photographs, or data collection. More than a toy, these call on our knowledge of armed drone killings in military combat, wildlife harming, or police surveillance.",
   citation:
-    "Figure 4.14 Albrecht Durer, Draftsman Drawing a Nude, illustration from The Painter’s Manual, 1525 (in book p 154)",
+    "Best drones with 4K cameras” https://www.adorama.com/alc/what-are-the-best-drones-with-4k-cameras/",
   notes: "",
   audio: "",
 };
-
-class ArcStage {
-  constructor(img, text, notes, citation, audio) {
-    this.text = text;
-    this.notes = notes;
-    this.citation = citation;
-    this.audio = audio;
-  }
-}
+const tenPointOnePage5 = {
+  text: "As you will recall from Chapter 1, the distanced effect of the drone’s viewpoint turns targets into small dots. A person killed by drones is referred to as a bug splat in military slang. A counter-attack on drone users and unjust warfare was designed to be visible to satellites and aerial cameras. By blowing up the image of a single child victim killed by aerial warfare, unrolling the poster as an image that now became visible to those looking from above, the child returns the gaze emanating from the God’s eye view in the large-scale installation project #NotABugSplat to call attention to the real lives of child victims and the value of civilian lives dehumanized by machinic vision in a heavily bombed area of Pakistan.",
+  citation:
+    "Saks Afridi, Ali Rez, Akash Goel, Insiya Syed, JR, Assam Khalid, Jamil Akhtar, and Noor Behram, #NotABugSplat (Page 24 in book, Ch 1)",
+  notes: "",
+  audio: "",
+};
+const tenPointOnePage6 = {
+  text: "ADD MOVIE",
+  citation:
+    "[Video provided by Maia, temporary screenshot for sample] Drawing grid over image",
+  notes: "",
+  audio: "",
+};
+const tenPointOnePage7 = {
+  text: "As we can see in this image someone is tracing on top of the photograph that we have just seen. On either side of the image there are two vanishing points, one on the right and one on the left that go beyond the frame of the photograph. Therefore a two-point perspective grid is easy to create for this image because the buildings are already arranged in grid-fashion, lined up along straight lines that intersect at square angles, meeting at the front bottom of the image. Even with no knowledge of drawing, if you follow the outer edges of the buildings or drew a line through them, you will get a grid. To return to the photograph itself, note that it also teaches us about scale: the size of the road helps us to compare it to the scale of the housing units, which appear to be smaller than a two-lane road. ",
+  citation:
+    "Image citation: Aerial photograph of AFAD temporary sheltering center where Syrian people live in the Suruç district of Şanlıurfa Province, Turkey, as shared in a Twitter feed January 24, 2015",
+  notes: "",
+  audio: "",
+};
+const tenPointOnePage8 = {
+  text: "Here the fence line has been drawn in yellow to emphasize the decisions made about the limits of the camp that determined and controlled where people were allowed to move. ",
+  citation: "",
+  notes: "",
+  audio: "",
+};
 
 const tenPointOneContent = {};
 
@@ -43,3 +61,12 @@ export function gatherContent(chapter, page) {
 }
 
 // each subchapter has its own arc
+
+// class ArcStage {
+//   constructor(img, text, notes, citation, audio) {
+//     this.text = text;
+//     this.notes = notes;
+//     this.citation = citation;
+//     this.audio = audio;
+//   }
+// }
