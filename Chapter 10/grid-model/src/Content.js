@@ -1,6 +1,7 @@
 const tenPointOnePage1 = {
   text: "This photograph provides a God’s eye view of Turkey’s largest Syrian refugee camp taken by a drone. Ideology informs the design of shelters for displaced people, by arranging homes as if in a perspectival grid that organizes, manages and contains it inhabitants. The emphasis in the photograph on the planar and linear leaves out texture, straightening and arranging what could be perceived as deviance. Where one can circulate is restricted and prescribed. Their freedom is limited. What's complicated and vulnerable becomes smoothly encased and hidden. The camp as a designed living space is on a flat raised terrain, with no plant structures, no shade, no cultural centers, public transportation, it is remote and isolated. Yellow brown arid ground indicates a hot and dry climate. Small squares of shade help protect but are they enough to seek refuge from the environmental conditions of heat? The camp land is doubly enclosed, both within the fence, the surrounding road, and the hill. A small parking lot to the bottom of the image shows vehicles but we know they don’t belong to the residents who are isolated spatially and marginalized from society at large.",
-  citation: "citation ignored for now",
+  citation:
+    "Aerial photograph of AFAD temporary sheltering center where Syrian people live in the Suruç district of Şanlıurfa Province, Turkey, as shared in a Twitter feed January 24, 2015",
   notes: "Take notes here!",
   audio: "",
 };
@@ -41,7 +42,7 @@ const tenPointOnePage6 = {
   audio: "",
 };
 const tenPointOnePage7 = {
-  text: "As we can see in this image someone is tracing on top of the photograph that we have just seen. On either side of the image there are two vanishing points, one on the right and one on the left that go beyond the frame of the photograph. Therefore a two-point perspective grid is easy to create for this image because the buildings are already arranged in grid-fashion, lined up along straight lines that intersect at square angles, meeting at the front bottom of the image. Even with no knowledge of drawing, if you follow the outer edges of the buildings or drew a line through them, you will get a grid. To return to the photograph itself, note that it also teaches us about scale: the size of the road helps us to compare it to the scale of the housing units, which appear to be smaller than a two-lane road. ",
+  text: "As we can see in this image someone is tracing on top of the photograph that we have just seen. On either side of the image there are two vanishing points, one on the right and one on the left that go beyond the frame of the photograph. Therefore a two-point perspective grid is easy to create for this image because the buildings are already arranged in grid-fashion, lined up along straight lines that intersect at square angles, meeting at the front bottom of the image. Even with no knowledge of drawing, if you follow the outer edges of the buildings or drew a line through them, you will get a grid.",
   citation:
     "Image citation: Aerial photograph of AFAD temporary sheltering center where Syrian people live in the Suruç district of Şanlıurfa Province, Turkey, as shared in a Twitter feed January 24, 2015",
   notes: "Take notes here!",

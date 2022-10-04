@@ -19,17 +19,20 @@ const ArcStage = (props) => {
   return (
     <div className="arc-stage-page-wrapper">
       <section className="stage-grid">
-        <div className="top-row">
+        <div className="top-stage-row">
           <MediaComponent subChapter={props.subChapter} page={props.page} />
         </div>
-        <p className="citation"> {props.citation} </p>
+
         <div className="bottom-stage-row">
-          <p className="image-description"> {props.text}</p>
-          <textarea
-            className="note-pad"
-            value={textAreaState}
-            onChange={handleTextChange}
-          ></textarea>
+          <p className="citation"> {props.citation} </p>
+          <div className="description-and-notes-wrapper">
+            <p className="image-description"> {props.text}</p>
+            <textarea
+              className="note-pad"
+              value={textAreaState}
+              onChange={handleTextChange}
+            ></textarea>
+          </div>
         </div>
       </section>
       <div className="buttons-section">
