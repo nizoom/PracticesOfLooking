@@ -7,12 +7,13 @@ import { VideoPlayer } from "./Movie";
 
 const MediaComponent = (props) => {
   const [img, setImg] = useState();
-  // const [audio, setAudio] = useState();
   const [play, setPlay] = useState(false);
 
   useEffect(() => {
-    const imageSrc = require(`../SubChapters/${props.subChapter}/images/image${props.page}.png`);
-    setImg(imageSrc);
+    if (!props.movieStatus) {
+      const imageSrc = require(`../SubChapters/${props.subChapter}/images/image${props.page}.png`);
+      setImg(imageSrc);
+    }
     setPlay(false);
   }, [props.page]);
 
