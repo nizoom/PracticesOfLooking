@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PracticeOfLooking/static/css/main.1c5e9db7.css",
-    "main.js": "/PracticeOfLooking/static/js/main.906d256c.js",
+    "main.js": "/PracticeOfLooking/static/js/main.c3130721.js",
     "static/js/787.afcb6113.chunk.js": "/PracticeOfLooking/static/js/787.afcb6113.chunk.js",
     "static/media/tulpan.mp4": "/PracticeOfLooking/static/media/tulpan.787b09b0493801e9137f.mp4",
     "static/media/image8.png": "/PracticeOfLooking/static/media/image8.12c7f3cf40f848963edf.png",
@@ -11,6 +11,7 @@
     "static/media/image3.png": "/PracticeOfLooking/static/media/image3.888d22d60222e1dbbf8d.png",
     "static/media/image2.png": "/PracticeOfLooking/static/media/image2.0745625d43d20676d7de.png",
     "static/media/audio1.mp3": "/PracticeOfLooking/static/media/audio1.fffc98d1adcaab39a1ff.mp3",
+    "static/media/audio8.mp3": "/PracticeOfLooking/static/media/audio8.69d2d9a1b1c99798b30c.mp3",
     "static/media/image4.png": "/PracticeOfLooking/static/media/image4.8bae1cf1e785272adf2f.png",
     "static/media/audio5.mp3": "/PracticeOfLooking/static/media/audio5.767f452e0e8cb6dd0dc7.mp3",
     "static/media/audio4.mp3": "/PracticeOfLooking/static/media/audio4.8933083c4045508f4b0a.mp3",
@@ -20,11 +21,11 @@
     "static/media/audio3.mp3": "/PracticeOfLooking/static/media/audio3.f65eb32190bafc94a4a6.mp3",
     "index.html": "/PracticeOfLooking/index.html",
     "main.1c5e9db7.css.map": "/PracticeOfLooking/static/css/main.1c5e9db7.css.map",
-    "main.906d256c.js.map": "/PracticeOfLooking/static/js/main.906d256c.js.map",
+    "main.c3130721.js.map": "/PracticeOfLooking/static/js/main.c3130721.js.map",
     "787.afcb6113.chunk.js.map": "/PracticeOfLooking/static/js/787.afcb6113.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1c5e9db7.css",
-    "static/js/main.906d256c.js"
+    "static/js/main.c3130721.js"
   ]
 }
