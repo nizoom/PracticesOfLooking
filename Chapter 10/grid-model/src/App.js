@@ -1,13 +1,23 @@
 import "./Styles/App.css";
 import "./Styles/CompiledCss/globalstyles.css";
 import StageHandler from "./Components/StageHandler";
-import { useState } from "react";
+import { useState, useRef } from "react";
 const App = () => {
   // Manage state props in seperate function
+  const TenPointOneRef = useRef();
+  const TenPointTwoRef = useRef();
   const [page, setPage] = useState(0);
+  const [subChapter, setSubChapter] = useState("");
 
-  const handleArcClick = () => {
-    setPage(page + 1);
+  const handleArcClick = (ref) => {
+    if (ref === TenPointOneRef) {
+      setSubChapter("10.1");
+      setPage(page + 1);
+    }
+    if (ref === TenPointTwoRef) {
+      setSubChapter("10.2");
+      setPage(page + 1);
+    }
   };
   const handlePageChange = (direction) => {
     if (direction === "next") {
@@ -23,9 +33,6 @@ const App = () => {
     }
   };
 
-  // useEffect(() => {
-  //   console.log(page);
-  // });
   return (
     <div className="App">
       {page === 0 ? (
@@ -34,10 +41,18 @@ const App = () => {
             Chapter 10: The Global Flow of Visual Culture
           </header>
           <div className="top-row">
-            <div className="square" onClick={handleArcClick}>
+            <div
+              className="square"
+              onClick={() => handleArcClick(TenPointOneRef)}
+              ref={TenPointOneRef}
+            >
               <p> Top down infrastructure</p>
             </div>
-            <div className="square" onClick={handleArcClick}>
+            <div
+              className="square"
+              onClick={() => handleArcClick(TenPointTwoRef)}
+              ref={TenPointTwoRef}
+            >
               <p>Where is the human? </p>
             </div>
           </div>
@@ -54,7 +69,7 @@ const App = () => {
         <StageHandler
           page={page}
           handlePageChange={handlePageChange}
-          subChapter="10.1"
+          subChapter={subChapter}
         />
       )}
     </div>
