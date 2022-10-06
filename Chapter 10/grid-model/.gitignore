@@ -11,7 +11,8 @@
 /build
 
 # misc
-./src/SubChapters/10.1
+../public/videos
+./src/SubChapters
 .DS_Store
 .env.local
 .env.development.local

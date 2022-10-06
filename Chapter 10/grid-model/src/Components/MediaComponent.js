@@ -3,15 +3,17 @@ import PlayBtn from "../SubChapters/10.1/misc/play-button.png";
 import PauseBtn from "../SubChapters/10.1/misc/pause-button.png";
 import ReactHowler from "react-howler";
 // import audioFile from "../SubChapters/10.1/audio/audio1.mp3";
+import { VideoPlayer } from "./Movie";
 
 const MediaComponent = (props) => {
   const [img, setImg] = useState();
   // const [audio, setAudio] = useState();
-  const [play, setPlay] = useState(true);
+  const [play, setPlay] = useState(false);
 
   useEffect(() => {
     const imageSrc = require(`../SubChapters/${props.subChapter}/images/image${props.page}.png`);
     setImg(imageSrc);
+    setPlay(false);
   }, [props.page]);
 
   const togglePlay = () => {
@@ -22,7 +24,7 @@ const MediaComponent = (props) => {
     <div className="media-component-wrapper">
       <div className="audio-player-wrapper">
         <button className="play-btn" onClick={togglePlay}>
-          {play ? (
+          {!play ? (
             <img
               src={PlayBtn}
               height="50"
@@ -35,18 +37,22 @@ const MediaComponent = (props) => {
           )}
           <ReactHowler
             src={require(`../SubChapters/${props.subChapter}/audio/audio${props.page}.mp3`)}
-            playing={!play}
+            playing={play}
           />
         </button>
       </div>
       <div className="image-wrapper">
-        <img
-          className="image-square"
-          src={img}
-          alt=""
-          width="200"
-          height="400"
-        />
+        {props.movieStatus ? (
+          <VideoPlayer path={"../../public/videos/tulpan.mp4"} />
+        ) : (
+          <img
+            className="image-square"
+            src={img}
+            alt=""
+            width="200"
+            height="400"
+          />
+        )}
       </div>
     </div>
   );

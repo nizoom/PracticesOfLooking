@@ -20,7 +20,11 @@ const ArcStage = (props) => {
     <div className="arc-stage-page-wrapper">
       <section className="stage-grid">
         <div className="top-stage-row">
-          <MediaComponent subChapter={props.subChapter} page={props.page} />
+          <MediaComponent
+            subChapter={props.subChapter}
+            page={props.page}
+            movieStatus={props.movieStatus}
+          />
         </div>
 
         <div className="bottom-stage-row">
