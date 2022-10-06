@@ -1,24 +1,30 @@
 {
   "files": {
-    "main.css": "/PracticeOfLooking/static/css/main.8b667f17.css",
-    "main.js": "/PracticeOfLooking/static/js/main.c54e3acf.js",
+    "main.css": "/PracticeOfLooking/static/css/main.1c5e9db7.css",
+    "main.js": "/PracticeOfLooking/static/js/main.906d256c.js",
     "static/js/787.afcb6113.chunk.js": "/PracticeOfLooking/static/js/787.afcb6113.chunk.js",
+    "static/media/tulpan.mp4": "/PracticeOfLooking/static/media/tulpan.787b09b0493801e9137f.mp4",
+    "static/media/image8.png": "/PracticeOfLooking/static/media/image8.12c7f3cf40f848963edf.png",
     "static/media/image7.png": "/PracticeOfLooking/static/media/image7.b958de2aca6cfd099901.png",
-    "static/media/image8.png": "/PracticeOfLooking/static/media/image8.b958de2aca6cfd099901.png",
     "static/media/image5.png": "/PracticeOfLooking/static/media/image5.31fd09a19e6969844bc9.png",
     "static/media/image1.png": "/PracticeOfLooking/static/media/image1.90c23ce9d8dec497189a.png",
-    "static/media/image6.png": "/PracticeOfLooking/static/media/image6.90c23ce9d8dec497189a.png",
-    "static/media/image9.png": "/PracticeOfLooking/static/media/image9.90c23ce9d8dec497189a.png",
     "static/media/image3.png": "/PracticeOfLooking/static/media/image3.888d22d60222e1dbbf8d.png",
     "static/media/image2.png": "/PracticeOfLooking/static/media/image2.0745625d43d20676d7de.png",
+    "static/media/audio1.mp3": "/PracticeOfLooking/static/media/audio1.fffc98d1adcaab39a1ff.mp3",
     "static/media/image4.png": "/PracticeOfLooking/static/media/image4.8bae1cf1e785272adf2f.png",
+    "static/media/audio5.mp3": "/PracticeOfLooking/static/media/audio5.767f452e0e8cb6dd0dc7.mp3",
+    "static/media/audio4.mp3": "/PracticeOfLooking/static/media/audio4.8933083c4045508f4b0a.mp3",
+    "static/media/audio6.mp3": "/PracticeOfLooking/static/media/audio6.58a0123b9a3b270dd9ec.mp3",
+    "static/media/audio2.mp3": "/PracticeOfLooking/static/media/audio2.03c12d37cddd86440a7b.mp3",
+    "static/media/audio7.mp3": "/PracticeOfLooking/static/media/audio7.ff264c27fd65a78448e4.mp3",
+    "static/media/audio3.mp3": "/PracticeOfLooking/static/media/audio3.f65eb32190bafc94a4a6.mp3",
     "index.html": "/PracticeOfLooking/index.html",
-    "main.8b667f17.css.map": "/PracticeOfLooking/static/css/main.8b667f17.css.map",
-    "main.c54e3acf.js.map": "/PracticeOfLooking/static/js/main.c54e3acf.js.map",
+    "main.1c5e9db7.css.map": "/PracticeOfLooking/static/css/main.1c5e9db7.css.map",
+    "main.906d256c.js.map": "/PracticeOfLooking/static/js/main.906d256c.js.map",
     "787.afcb6113.chunk.js.map": "/PracticeOfLooking/static/js/787.afcb6113.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b667f17.css",
-    "static/js/main.c54e3acf.js"
+    "static/css/main.1c5e9db7.css",
+    "static/js/main.906d256c.js"
   ]
 }
