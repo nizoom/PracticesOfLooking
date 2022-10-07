@@ -142,11 +142,19 @@
   width: 200px;
 }
 
+.movie-player-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.video-stream {
+  width: 500px;
+}
+
 @media (max-width: 1300px) {
   .buttons-section {
     margin-bottom: -15px;
     padding-bottom: 20px;
-    justify-content: space-evenly;
   }
   .back-btns-div {
     flex-direction: row;

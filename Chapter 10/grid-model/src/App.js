@@ -46,14 +46,14 @@ const App = () => {
               onClick={() => handleArcClick(TenPointOneRef)}
               ref={TenPointOneRef}
             >
-              <p> Top down infrastructure</p>
+              <p> 1. Top down infrastructure</p>
             </div>
             <div
               className="square"
               onClick={() => handleArcClick(TenPointTwoRef)}
               ref={TenPointTwoRef}
             >
-              <p>Where is the human? </p>
+              <p>2. Where is the human? </p>
             </div>
           </div>
           <div className="bottom-row">
