@@ -44,7 +44,7 @@ const MediaComponent = (props) => {
       </div>
       <div className="image-wrapper">
         {props.movieStatus ? (
-          <VideoPlayer path={"../../public/videos/tulpan.mp4"} />
+          <VideoPlayer path={""} />
         ) : (
           <img
             className="image-square"

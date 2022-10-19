@@ -77,15 +77,24 @@ export function updateNotes(chapter, page, notes) {
   }
 }
 
-// const tenPointOnePage7 = {
-//   text: "To return to the photograph itself, note that it also teaches us about scale: the size of the road helps us to compare it to the scale of the housing units, which appear to be smaller than a two-lane road. Here the fence line has been drawn in yellow to emphasize the decisions made about the limits of the camp that determined and controlled where people were allowed to move. For instance, the large, white rectangular building is in an area enclosed by a fence that seems to have an opening in two spaces and pavement walkways leading to the building.",
-//   citation: "",
-//   notes: "Take notes here!",
-//   movieStatus: false,
-// };
-// const tenPointOnePage8 = {
-//   text: "What else do you notice about the potential walking routes? They are all linear, the neighbors are close, and there is a long distance from one’s home to what could be a communal facilities or a communal series of buildings in the center. This would have been important given that women and children often had to ask men to accompany them to such facilities at night for their safety. Given the handful of people we see that appear as specks, in this image we see some potential walking routes, a few additional humans in bright colors and trees have been added. Individuals that are outside in the camp do remain visible to the aerial vision from above. Does this remind us of the disappearance of the individual or does the God’s eye view show us their inability to hide? Are these cubes indeed homes? Could one walk outside at all times of the day, or were there strict regulations? In the next sequence we will move into unpacking the cube-like housing structures within industrial design and the individual housing units we have seen here.",
-//   citation: "",
-//   notes: "Take notes here!",
-//   movieStatus: false,
-// };
+// In your code to fetch data, you need two pieces of information to connect to your API:
+
+// A Project ID
+// A Dataset name
+
+const sanityProjectId = "96fg8wcg";
+const datasetName = "production";
+
+const url = "https://hpkr83.csb.app/";
+
+let QUERY = encodeURIComponent('*[_type == "animal"]');
+
+let URL = `https://${sanityProjectId}.api.sanity.io/v2021-10-21/data/query/${datasetName}?query=${QUERY}`;
+
+async function requestData() {
+  const result = await fetch(URL)
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+}
+
+requestData();
