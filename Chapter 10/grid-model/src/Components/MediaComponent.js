@@ -7,11 +7,9 @@ import { srcImage } from "../Content";
 
 const MediaComponent = (props) => {
   const [play, setPlay] = useState(false);
-
   const togglePlay = () => {
     setPlay(!play);
   };
-
   return (
     <div className="media-component-wrapper">
       <div className="audio-player-wrapper">
@@ -32,12 +30,12 @@ const MediaComponent = (props) => {
       </div>
       <div className="image-wrapper">
         {props.movieStatus ? (
-          <VideoPlayer path={""} />
+          <VideoPlayer path={props.videoURL} />
         ) : (
           <img
             className="image-square"
             src={srcImage(props.imgSrcData)}
-            alt=""
+            alt={props.imgDescription}
             width="200"
             height="400"
           />

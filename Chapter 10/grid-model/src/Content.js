@@ -43,20 +43,25 @@ export async function getSubChapterNames(chapterNumber) {
 export async function getArcContent(subchapterName) {
   const arcContentQuery =
     encodeURIComponent(`*[_type=="pageContent" && subChapter-> name=="${subchapterName}"]{
-    Citation,
-    Title,
-    image,
-    slideNumber,
-    slideText,
-    audio {
-    asset->{url}
-  }
+      Citation,
+      imageTitle,
+      Description,
+      videoBoolean,
+      image,
+      slideNumber,
+      slideText,
+      videoTitle,
+      videoURL,
+      audio {
+      asset->{url}
+    }
   }`);
   // get content for subchapter
   const arcContent = await fetch(generateUrl(arcContentQuery)).then((res) =>
     res.json()
   );
   const contentArr = arcContent.result;
+  // console.log(contentArr);
   const sortedContentArr = sortArcContentBySlideNumber(contentArr);
 
   // ORDER by slide number before returning

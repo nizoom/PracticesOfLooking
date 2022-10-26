@@ -17,7 +17,10 @@ const ChapterHandler = (props) => {
           handleSubChapterSelection={handleSubChapterSelection}
         />
       ) : (
-        <StageHandler chapterName={currentSubChapName} />
+        <StageHandler
+          chapterName={currentSubChapName}
+          backToTOC={props.backToTOC}
+        />
       )}
     </div>
   );

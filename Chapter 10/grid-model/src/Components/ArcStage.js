@@ -21,9 +21,12 @@ const ArcStage = (props) => {
       <section className="stage-grid">
         <div className="top-stage-row">
           <MediaComponent
+            imgDescription={props.description}
             imgSrcData={props.imgSrcData}
             audioUrl={props.audioUrl}
-            // movieStatus={props.movieStatus}
+            movieStatus={props.videoBoolean}
+            videoTitle={props.videoTitle}
+            videoURL={props.videURL}
           />
         </div>
 
@@ -41,10 +44,13 @@ const ArcStage = (props) => {
       </section>
       <div className="buttons-section">
         <div className="back-btns-div">
-          <button onClick={() => changePage("back")}>Back</button>
-          <button onClick={() => changePage("home")}>Home</button>
+          {props.page === 0 ? null : (
+            <button onClick={() => changePage("back")}>Back</button>
+          )}
+
+          <button onClick={props.backToTOC}>Home</button>
         </div>
-        {props.page === props.maxPage ? null : (
+        {props.page + 1 === props.maxPage ? null : (
           <button className="next-btn" onClick={() => changePage("next")}>
             Next
           </button>

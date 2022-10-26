@@ -9,7 +9,7 @@ const StageHandler = (props) => {
   useEffect(() => {
     const fetchArcContent = async () => {
       const arcContent = await getArcContent(props.chapterName);
-      console.log(arcContent);
+      console.log(arcContent[0]);
       setArcContentArr(arcContent);
     };
 
@@ -25,30 +25,29 @@ const StageHandler = (props) => {
       setCurrentPage(currentPage - 1);
       return;
     }
-    if (direction === "home") {
-      // setCurrentPage(0);
-      // go back to ChapterHomePage
-    }
   };
 
   return (
     <div>
       {arcContentArr ? (
         <ArcStage
+          backToTOC={props.backToTOC}
+          page={currentPage}
           handlePageChange={handlePageChange}
           citation={arcContentArr[currentPage].Citation}
           existingNotes={""}
           maxPage={arcContentArr.length}
           text={arcContentArr[currentPage].slideText}
+          description={arcContentArr[currentPage].Description}
           imgSrcData={arcContentArr[currentPage].image}
           audioUrl={arcContentArr[currentPage].audio.asset.url}
+          videoBoolean={arcContentArr[currentPage].videoBoolean}
+          videoTitle={arcContentArr[currentPage].videoTitle}
+          videoURL={arcContentArr[currentPage].videoURL}
         />
       ) : null}
     </div>
   );
 };
-// notes={content.notes}
-// movieStatus={content.movieStatus}
-export default StageHandler;
 
-// <ArcStage page={page} handlePageChange={handlePageChange} />
+export default StageHandler;

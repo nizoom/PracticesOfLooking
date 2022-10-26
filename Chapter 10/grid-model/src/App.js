@@ -1,7 +1,6 @@
 import "./Styles/App.css";
 import "./Styles/CompiledCss/globalstyles.css";
 import { useState } from "react";
-import ChapterHomePage from "./Components/ChapterHomePage";
 import { v4 as uuidv4 } from "uuid";
 import { getChapterNames } from "./Content";
 import ChapterHandler from "./Components/ChapterHandler";
@@ -14,6 +13,10 @@ const App = () => {
       chapterNumber: chapterNumber,
       chapterName: chapterName,
     });
+  };
+
+  const backToTOC = () => {
+    setCurrentChapter(0);
   };
 
   const renderChapterBoxes = () => {
@@ -53,6 +56,7 @@ const App = () => {
         <ChapterHandler
           chapterNumber={currentChapter.chapterNumber}
           chapterName={currentChapter.chapterName}
+          backToTOC={backToTOC}
         />
       )}
     </div>
