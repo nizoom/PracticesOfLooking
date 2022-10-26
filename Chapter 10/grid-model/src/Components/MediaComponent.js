@@ -12,22 +12,25 @@ const MediaComponent = (props) => {
   };
   return (
     <div className="media-component-wrapper">
-      <div className="audio-player-wrapper">
-        <button className="play-btn" onClick={togglePlay}>
-          {!play ? (
-            <img
-              src={PlayBtn}
-              height="50"
-              weight="50"
-              alt="play-audio"
-              style={{ marginLeft: "2px" }}
-            />
-          ) : (
-            <img src={PauseBtn} height="50" weight="50" alt="play-audio" />
-          )}
-          <ReactHowler src={props.audioUrl} playing={play} />
-        </button>
-      </div>
+      {props.audioUrl ? (
+        <div className="audio-player-wrapper">
+          <button className="play-btn" onClick={togglePlay}>
+            {!play ? (
+              <img
+                src={PlayBtn}
+                height="50"
+                weight="50"
+                alt="play-audio"
+                style={{ marginLeft: "2px" }}
+              />
+            ) : (
+              <img src={PauseBtn} height="50" weight="50" alt="play-audio" />
+            )}
+            <ReactHowler src={props.audioUrl} playing={play} />
+          </button>
+        </div>
+      ) : null}
+
       <div className="image-wrapper">
         {props.movieStatus ? (
           <VideoPlayer path={props.videoURL} />

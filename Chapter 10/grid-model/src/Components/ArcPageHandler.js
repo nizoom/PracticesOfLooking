@@ -9,7 +9,7 @@ const StageHandler = (props) => {
   useEffect(() => {
     const fetchArcContent = async () => {
       const arcContent = await getArcContent(props.chapterName);
-      console.log(arcContent[0]);
+      console.log(arcContent);
       setArcContentArr(arcContent);
     };
 
@@ -40,7 +40,7 @@ const StageHandler = (props) => {
           text={arcContentArr[currentPage].slideText}
           description={arcContentArr[currentPage].Description}
           imgSrcData={arcContentArr[currentPage].image}
-          audioUrl={arcContentArr[currentPage].audio.asset.url}
+          audioUrl={arcContentArr[currentPage].audio}
           videoBoolean={arcContentArr[currentPage].videoBoolean}
           videoTitle={arcContentArr[currentPage].videoTitle}
           videoURL={arcContentArr[currentPage].videoURL}

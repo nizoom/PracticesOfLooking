@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from "react";
-import ReactPlayer from "react-player";
+import React from "react";
+import ReactPlayer from "react-player/lazy";
 export const VideoPlayer = (props) => {
   // try adding movie to build folder instead
   return (
     <div className="movie-player-wrapper">
       <ReactPlayer
-        url={"https://www.youtube.com/watch?v=g5GMJcE-3eE"}
+        url={props.path}
         width="400"
         height="400"
-        controls={true}
+        controls={false}
+        config={{
+          youtube: {
+            playerVars: { showinfo: 0 },
+          },
+        }}
       />
     </div>
   );

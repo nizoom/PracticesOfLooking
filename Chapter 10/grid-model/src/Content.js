@@ -64,6 +64,13 @@ export async function getArcContent(subchapterName) {
   // console.log(contentArr);
   const sortedContentArr = sortArcContentBySlideNumber(contentArr);
 
+  const unNestAudioPropterty = sortedContentArr.map((page) => {
+    if (page.audio) {
+      const audioUrl = page.audio.asset.url;
+      page.audio = audioUrl;
+    }
+    return page;
+  });
   // ORDER by slide number before returning
   return sortedContentArr;
 }

@@ -26,7 +26,7 @@ const ArcStage = (props) => {
             audioUrl={props.audioUrl}
             movieStatus={props.videoBoolean}
             videoTitle={props.videoTitle}
-            videoURL={props.videURL}
+            videoURL={props.videoURL}
           />
         </div>
 
