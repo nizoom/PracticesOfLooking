@@ -1,72 +1,60 @@
 import "./Styles/App.css";
 import "./Styles/CompiledCss/globalstyles.css";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import ChapterHomePage from "./Components/ChapterHomePage";
+import { v4 as uuidv4 } from "uuid";
+import { getChapterNames } from "./Content";
+import ChapterHandler from "./Components/ChapterHandler";
+
 const App = () => {
+  // const [showhomepage, setShowhomepage] = useState(true);
+  const [currentChapter, setCurrentChapter] = useState(0);
+  const handleChapterSelection = (chapterNumber, chapterName) => {
+    setCurrentChapter({
+      chapterNumber: chapterNumber,
+      chapterName: chapterName,
+    });
+  };
+
+  const renderChapterBoxes = () => {
+    const chapterBoxes = getChapterNames().map((name, index) => {
+      const chapterNumber = (index + 1).toString();
+      return (
+        <div
+          key={uuidv4()}
+          className="parent-chapter-box"
+          onClick={() => handleChapterSelection(chapterNumber, name)}
+        >
+          <p className="number">{chapterNumber}</p>
+          <p className="chapter-title"> {name}</p>
+        </div>
+      );
+    });
+    return chapterBoxes;
+  };
   return (
     <div className="homepage">
-      <header>
-        <div className="project-titles">
-          <h1 className="book-title">
-            Practices of Looking: An Introduction to Visual Culture
-          </h1>
-          <h2 className="book-subtitle">Table of Contents</h2>
+      {currentChapter < 1 ? (
+        <div>
+          <header className="homepage-header">
+            <div className="project-titles">
+              <h1 className="book-title">
+                Practices of Looking: An Introduction to Visual Culture
+              </h1>
+              <h2 className="book-subtitle">Table of Contents</h2>
+            </div>
+          </header>
+          <section className="table-of-contents-section">
+            <nav className="toc-nav">{renderChapterBoxes()}</nav>
+          </section>
         </div>
-      </header>
-      <section className="table-of-contents-section">
-        <nav className="toc-nav">
-          <div className="parent-chapter-box">
-            <p className="number">1</p>
-            <p className="chapter-title"> Images, Power, and Politics</p>
-          </div>
-          <div className="parent-chapter-box">
-            <p className="number">2</p>
-            <p className="chapter-title">Viewers Make Meaning</p>
-          </div>
-          <div className="parent-chapter-box">
-            <p className="number">3</p>
-            <p className="chapter-title">Modernity, the Gaze, and Power</p>
-          </div>
-          <div className="parent-chapter-box">
-            <p className="number">4</p>
-            <p className="chapter-title">
-              Realism and Perspective From Renaissance Painting To Digital Media{" "}
-            </p>
-          </div>
-          <div className="parent-chapter-box">
-            <p className="number">5</p>
-            <p className="chapter-title">
-              Visual Technologies, Reproduction, and the Copy
-            </p>
-          </div>
-          <div className="parent-chapter-box">
-            <p className="number">6</p>
-            <p className="chapter-title"> Media in Everday Life</p>
-          </div>
-          <div className="parent-chapter-box">
-            <p className="number">7</p>
-            <p className="chapter-title">
-              Brand Culture: The Images and Space of Consumption
-            </p>
-          </div>
-          <div className="parent-chapter-box">
-            <p className="number">8</p>
-            <p className="chapter-title">
-              Postmodernism: Irony, Parody, and Pastiche
-            </p>
-          </div>
-          <div className="parent-chapter-box">
-            <p className="number">9</p>
-            <p className="chapter-title">
-              Scientific Looking, Looking at Science
-            </p>
-          </div>
-          <div className="parent-chapter-box">
-            <p className="number">10</p>
-            <p className="chapter-title">The Global Flow of Visual Culture</p>
-          </div>
-        </nav>
-      </section>
+      ) : (
+        // SET UP PARENT COMPONENT FOR CHAPTERHOMEPAGE AND ARC AS CHILD COMPONENTS
+        <ChapterHandler
+          chapterNumber={currentChapter.chapterNumber}
+          chapterName={currentChapter.chapterName}
+        />
+      )}
     </div>
   );
 };

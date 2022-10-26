@@ -9,7 +9,7 @@ const ArcStage = (props) => {
     setTextAreaState(event.target.value);
   };
   const changePage = (direction) => {
-    updateNotes(props.subChapter, props.page, textAreaState);
+    // updateNotes(props.subChapter, props.page, textAreaState);
     props.handlePageChange(direction);
   };
 
@@ -21,9 +21,9 @@ const ArcStage = (props) => {
       <section className="stage-grid">
         <div className="top-stage-row">
           <MediaComponent
-            subChapter={props.subChapter}
-            page={props.page}
-            movieStatus={props.movieStatus}
+            imgSrcData={props.imgSrcData}
+            audioUrl={props.audioUrl}
+            // movieStatus={props.movieStatus}
           />
         </div>
 

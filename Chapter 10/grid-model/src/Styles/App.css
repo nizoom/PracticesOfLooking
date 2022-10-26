@@ -8,9 +8,12 @@ body{
   background-color: #8BB3C2;
 }
 
-header{
+.homepage-header{
   background-color: #F26B73;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
 
 .project-titles{
@@ -71,7 +74,11 @@ header{
 
 
 
-
+@media(max-width: 615px){
+  header{
+    height: 250px;
+  }
+}
 
 
 
@@ -119,7 +126,7 @@ header{
   width: 80%;
   margin: auto;
   text-align: center;
-  color: #BE2228;
+  color: #a5191e;
   font-size: 28.43px;
 }
 .chapter-header{
