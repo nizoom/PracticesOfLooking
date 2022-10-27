@@ -18,6 +18,7 @@ export function getChapterNames() {
     "Realism and Perspective From Renaissance Painting To Digital Media",
     "Visual Technologies, Reproduction, and the Copy",
     "Media in Everday Life",
+    "Brand Culture: The Images and Space of Consumption",
     "Postmodernism: Irony, Parody, and Pastiche",
     "Scientific Looking, Looking at Science",
     "The Global Flow of Visual Culture",

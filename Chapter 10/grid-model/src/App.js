@@ -29,7 +29,9 @@ const App = () => {
           onClick={() => handleChapterSelection(chapterNumber, name)}
         >
           <p className="number">{chapterNumber}</p>
-          <p className="chapter-title"> {name}</p>
+          <p className="chapter-title" style={{ marginTop: "10px" }}>
+            {name}
+          </p>
         </div>
       );
     });
@@ -48,7 +50,15 @@ const App = () => {
             </div>
           </header>
           <section className="table-of-contents-section">
-            <nav className="toc-nav">{renderChapterBoxes()}</nav>
+            <nav className="toc-nav">
+              <div key={uuidv4()} className="parent-chapter-box">
+                <p className="chapter-title"> Title Page</p>
+              </div>
+              <div key={uuidv4()} className="parent-chapter-box">
+                <p className="chapter-title"> Intro</p>
+              </div>
+              {renderChapterBoxes()}
+            </nav>
           </section>
         </div>
       ) : (
